@@ -5,23 +5,25 @@
     const role = ref("");
 
     const handleRegister = async () => {
-        var request = await $fetch("http://localhost:3000/api/user/register", {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
+        // var request = await $fetch("http://localhost:3000/api/user/register", {
+        // method: 'POST',
+        // headers: {
+        //     'Content-Type': 'application/json'
+        // },
+        //
+        // body: {
+        //     "login" : login.value,
+        //     "email" : email.value,
+        //     "password" : password.value,
+        //     "role" : role.value
+        // }
+        // })
+        //
+        // if (request.status != 404) {
+        // return navigateTo("/")
+        // }
 
-        body: {
-            "login" : login.value,
-            "email" : email.value,
-            "password" : password.value,
-            "role" : role.value
-        }
-        })
-
-        if (request.status != 404) {
-        return navigateTo("/")
-        }
+      return navigateTo("/events")
     }
 </script>
 
