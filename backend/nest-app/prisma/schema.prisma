@@ -26,8 +26,10 @@ model Users {
   password String
   role     Role   @default(Applicant)
 
-  interests  Interests[]
-  meropriyat Meropriyat[]
+  interests        Interests[]
+  meropriyat       Meropriyat[]
+  chatLinks        ChatSubscribers[]
+  chatMessageLinks ChatMessage[]
 }
 
 model Interest {
@@ -55,4 +57,33 @@ model Meropriyat {
   owner_id    Int
 
   interests Interests[]
+}
+
+model ChatSubscribers {
+  id Int @id @default(autoincrement())
+
+  chat    Chat @relation(fields: [chat_id], references: [id])
+  chat_id Int
+
+  user    Users @relation(fields: [user_id], references: [id])
+  user_id Int
+}
+
+model Chat {
+  id   Int    @id @default(autoincrement())
+  name String
+
+  chatLinks        ChatSubscribers[]
+  chatMessageLinks ChatMessage[]
+}
+
+model ChatMessage {
+  id      Int    @id @default(autoincrement())
+  message String
+
+  chat    Chat @relation(fields: [chat_id], references: [id])
+  chat_id Int
+
+  user    Users @relation(fields: [user_id], references: [id])
+  user_id Int
 }
