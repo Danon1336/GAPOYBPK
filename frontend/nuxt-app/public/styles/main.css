@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'Munson';
+    src: url('/Webfonts/Munson_Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Munson';
+    src: url('/Webfonts/Munson_BoldItalic.otf') format('opentype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Munson';
+    src: url('/Webfonts/Munson_Italic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Munson';
+    src: url('/Webfonts/Munson_Roman.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    background-color: #D0E1F9; 
+}
