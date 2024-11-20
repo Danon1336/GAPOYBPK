@@ -8,8 +8,8 @@
         </div>
         <div class="menu">
             <div class="search">
-            <img src="public/img/search.png" alt="" />
-            <input class="menu-item" placeholder="Поиск мероприятий" />
+                <img src="public/img/search.png" alt="" />
+                <input class="menu-item" placeholder="Поиск мероприятий" />
             </div>
             <div class="divider"></div>
             <nuxt-link to="/" class="menu-item">Клубы</nuxt-link>
@@ -36,9 +36,53 @@
             </div>
             <h1 class="title">Мероприятия</h1>
             </div>
-            <button class="btn" @click="showAddEventForm = !showAddEventForm">
-            Добавить мероприятие
-            </button>
+            <div class="dropdown">
+                <button class="btn" @click="showAddEventForm = !showAddEventForm">
+                Добавить мероприятие
+                </button>
+                    <form
+                        v-if="showAddEventForm"
+                        class="add-event-form"
+                        @submit.prevent="addEvent">
+                        <input
+                        type="text"
+                        v-model="newEvent.title"
+                        placeholder="Название мероприятия"
+                        required
+                        />
+                        <input
+                        type="date"
+                        v-model="newEvent.startDate"
+                        placeholder="Дата начала"
+                        required
+                        />
+                        <input
+                        type="date"
+                        v-model="newEvent.endDate"
+                        placeholder="Дата окончания"
+                        required
+                        />
+                        <textarea
+                        v-model="newEvent.description"
+                        placeholder="Описание"
+                        rows="3"
+                        required
+                        ></textarea>
+                        <input
+                        type="text"
+                        v-model="newEvent.location"
+                        placeholder="Место проведения"
+                        required
+                        />
+                        <input
+                        type="text"
+                        v-model="newEvent.organizer"
+                        placeholder="Организаторы"
+                        required
+                        />
+                        <button type="submit" class="btn">Сохранить</button>
+                    </form>
+            </div>
         </div>
 
         <!-- Постоянное мероприятие -->
@@ -55,50 +99,7 @@
         </div>
 
         <!-- Форма добавления мероприятия -->
-        <form
-            v-if="showAddEventForm"
-            class="add-event-form"
-            @submit.prevent="addEvent"
-        >
-            <input
-            type="text"
-            v-model="newEvent.title"
-            placeholder="Название мероприятия"
-            required
-            />
-            <input
-            type="date"
-            v-model="newEvent.startDate"
-            placeholder="Дата начала"
-            required
-            />
-            <input
-            type="date"
-            v-model="newEvent.endDate"
-            placeholder="Дата окончания"
-            required
-            />
-            <textarea
-            v-model="newEvent.description"
-            placeholder="Описание"
-            rows="3"
-            required
-            ></textarea>
-            <input
-            type="text"
-            v-model="newEvent.location"
-            placeholder="Место проведения"
-            required
-            />
-            <input
-            type="text"
-            v-model="newEvent.organizer"
-            placeholder="Организаторы"
-            required
-            />
-            <button type="submit" class="btn">Сохранить</button>
-        </form>
-
+        
         <!-- Список мероприятий -->
         <div class="events">
             <div class="event-card" v-for="event in events" :key="event.id">
@@ -181,6 +182,8 @@ h1{
     justify-content: space-evenly;
     align-items: center;
     padding: 20px 40px;
+    backdrop-filter: blur(4px);
+    background-color: #d9f5f7;
 }
 .navbar img{
     width: 80px;
@@ -244,6 +247,7 @@ h1{
     padding: 10px 20px;
     border-radius: 4px;
     cursor: pointer;
+    right: 2%;
 }
 
 .btn:hover {
@@ -281,8 +285,9 @@ h1{
 .search{
     display: flex;
     align-items: center;
-    background: #000;
+    background: #ffffff;
     padding: 10px;
+    border:1px solid black;
     border-radius: 20px;
 }
 .search img{
@@ -294,7 +299,7 @@ h1{
     background: none;
     border: none;
     outline: none;
-    color: #ffffff;
+    color: #000000;
     width: 100%;
 }
 .event{
@@ -321,8 +326,11 @@ h1{
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 400px;
+    width: 300px;
+    position: absolute;
+    margin-top: 2%;
     justify-content: center;
+    right: 2%;
 }
 .persistent-event {
     background-color: #f9f9f9;
