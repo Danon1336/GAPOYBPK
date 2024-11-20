@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div :style="{ backgroundColor: '#D0E1F9' }">
+  <div>
     <div class="container">
     <div class="left">
       <div class="logo">
@@ -27,6 +27,7 @@
     </div>
 
     <div class="right">
+      <img class="logotype" src="/img/logotype.png" alt="Логотип"/>
       <img class="books" src="/img/books.png" alt="Книги" />
     </div>
   </div>
@@ -78,12 +79,12 @@
 
 .logo-text h1 {
   font-size: 28px;
-  color: #333;
+
 }
 
 .college {
   font-size: 14px;
-  color: #333;
+
 }
 
 .content {
@@ -93,7 +94,7 @@
 .title {
   font-size: 72pt;
   font-weight: bold;
-  color: #333;
+
 }
 
 .subtitle {
@@ -129,12 +130,17 @@
 }
 
 .books {
-  width: 600px;
+  width: 560px;
   height: auto;
+}
+.logotype {
+  width: 46%;
+  height: 28%;
 }
 .btn{
     font-size: 16pt;
     color: #ffffff;
     transition: 0.3s;
 }
+
 </style>
