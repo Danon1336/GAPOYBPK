@@ -60,7 +60,7 @@
                 >
                 <p><strong>{{ message.sender }}:</strong></p>
                 <div v-if="message.type === 'text'">{{ message.text }}</div>
-                <div v-else-if="message.type === 'audio'">
+                <div v-else-if="message.type === 'audio'" class="audio-container">
                     <audio controls :src="message.audioUrl"></audio>
                 </div>
                 </div>
@@ -484,6 +484,4 @@
         transform: scale(1);
     }
     }
-
-
 </style>
