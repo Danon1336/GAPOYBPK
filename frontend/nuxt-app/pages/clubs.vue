@@ -26,7 +26,7 @@
                 <img :src="club.image" alt="Изображение клуба" />
             </div>
             <div class="club-details">
-                <h3>Клуб {{ club.name }}</h3>
+                <h3>{{ club.name }}</h3>
                 <p>{{ club.description }}</p>
                 <button class="join-btn">Вступить!</button>
             </div>
@@ -49,15 +49,15 @@
             },
             {
             id: 2,
-            name: "",
+            name: "Футбол",
             description: "Описание клуба",
-            image: "/img/placeholder.png",
+            image: "/img/soccer.png",
             },
             {
             id: 3,
-            name: "Клуб {name}",
+            name: "Волейбол",
             description: "Описание клуба",
-            image: "/img/placeholder.png",
+            image: "/img/volleyball.png",
             },
         ],
         };
@@ -66,7 +66,7 @@
 </script>
 
 <style scoped>
-    `.club-page {
+    .club-page {
     font-family: Arial, sans-serif;
     background-color: #eaf3ff;
     min-height: 100vh;
@@ -83,7 +83,12 @@
     padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
-
+    .club-image{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
     .logo {
     display: flex;
     align-items: center;
@@ -151,7 +156,7 @@
     background-color: #f0f8ff;
     border: 1px solid #000;
     padding: 20px;
-    width: 80%;
+    width: 30%;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }

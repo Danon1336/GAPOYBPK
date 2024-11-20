@@ -14,6 +14,7 @@
     }
     body {
         background-color: #D0E1F9;
+        
     }
     .FAQ-main {
         width: 100%;
