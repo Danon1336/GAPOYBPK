@@ -22,10 +22,8 @@
           <NuxtLink to="/register" class="btn">Войти в систему</NuxtLink>
           <NuxtLink to="/events" class="btn">Мероприятия</NuxtLink>
         </div>
-          
       </div>
     </div>
-
     <div class="right">
       <img class="logotype" src="/img/logotype.png" alt="Логотип"/>
       <img class="books" src="/img/books.png" alt="Книги" />

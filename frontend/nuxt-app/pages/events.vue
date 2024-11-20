@@ -2,42 +2,56 @@
     <div class="page-container">
         <!-- Навигационная панель -->
         <nav class="navbar">
-            <div class="logo">
-                <img class="logo-img" src="/img/logo.png" alt="Логотип" />
-                <NuxtLink to="/"><h1>StudLink</h1></NuxtLink>
+        <div class="logo">
+            <img class="logo-img" src="/img/logo.png" alt="Логотип" />
+            <NuxtLink to="/"><h1>StudLink</h1></NuxtLink>
+        </div>
+        <div class="menu">
+            <div class="search">
+            <img src="public/img/search.png" alt="" />
+            <input class="menu-item" placeholder="Поиск мероприятий" />
             </div>
-            <div class="menu">
-                <div class="search">
-                    <img src="public/img/search.png" alt="">
-                    <input class="menu-item" placeholder="Поиск мероприятий"></input>
-                </div>
-                <div class="divider"></div>
-                <nuxt-link to="/" class="menu-item">Клубы</nuxt-link>
-                <div class="divider"></div>
-                <nuxt-link to="/" class="menu-item">Студенты</nuxt-link>
-                <div class="divider"></div>
-                <nuxt-link to="/" class="menu-item">Обратная связь</nuxt-link>
-            </div>
-            <img src="public/img/student.png" alt="">
+            <div class="divider"></div>
+            <nuxt-link to="/" class="menu-item">Клубы</nuxt-link>
+            <div class="divider"></div>
+            <nuxt-link to="/" class="menu-item">Студенты</nuxt-link>
+            <div class="divider"></div>
+            <nuxt-link to="/" class="menu-item">Обратная связь</nuxt-link>
+        </div>
+        <img src="public/img/student.png" alt="" />
         </nav>
         <div class="divider1"></div>
+
         <!-- Основная часть -->
         <div class="content">
         <div class="header">
             <div class="event">
-                <img src="public/img/filter.png" alt="">
-                <div class="filter">
-                    <select v-model="role" name="" id="" placeholder="Категории">
-                        <option value="Категории" selected disabled>Категории</option>
-                        <option value="Applicant">Абитуриент</option>
-                        <option value="Student">Студент</option>
-                    </select>
-                </div>
-                <h1 class="title">Мероприятия</h1>
+            <img src="public/img/filter.png" alt="" />
+            <div class="filter">
+                <select v-model="role" name="" id="" placeholder="Категории">
+                <option value="Категории" selected disabled>Категории</option>
+                <option value="Applicant">Абитуриент</option>
+                <option value="Student">Студент</option>
+                </select>
+            </div>
+            <h1 class="title">Мероприятия</h1>
             </div>
             <button class="btn" @click="showAddEventForm = !showAddEventForm">
             Добавить мероприятие
             </button>
+        </div>
+
+        <!-- Постоянное мероприятие -->
+        <div class="persistent-event">
+            <h2 class="event-title">Хакатон</h2>
+            <p class="event-date">19.10.24 - 21.10.24</p>
+            <p class="event-description">
+            19 ноября в Республике Башкортостан на базе Белорецкого педагогического колледжа стартовал региональный этап
+            Всероссийского конкурса «Моя профессия – ИТ» - категория Б (студенты)!
+            </p>
+            <p class="event-location">Место: Белорецк</p>
+            <p class="event-organizer">Организатор: БПК</p>
+            <iframe src="https://vk.com/video_ext.php?oid=-153401417&id=456239519&hd=3" width="100%" height="400px" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>
         </div>
 
         <!-- Форма добавления мероприятия -->
@@ -99,7 +113,6 @@
         </div>
         </div>
     </div>
-
 </template>
 
 <script>
@@ -310,5 +323,34 @@ h1{
     gap: 20px;
     width: 400px;
     justify-content: center;
+}
+.persistent-event {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    width:50%;
+    height: fit-content;
+    margin: 0 auto;
+    }
+
+.persistent-event .event-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    }
+
+.persistent-event .event-date,
+.persistent-event .event-description,
+.persistent-event .event-location,
+.persistent-event .event-organizer {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+    }
+.persistent-event img{
+    width: 100%;
+    margin-right: 10px;
 }
 </style>
