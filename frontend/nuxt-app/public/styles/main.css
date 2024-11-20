@@ -26,6 +26,9 @@
     font-style: normal;
 }
 body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     background-color: #d8dbe2;
 	background-image: 
 		repeating-radial-gradient(circle at 0 100%, rgba(27,27,30, 0.1), rgba(88,164,176, 0.15) 1px, rgba(216,219,226, 0.2) 2px, rgba(88,164,176, 0.15) 3px, rgba(27,27,30, 0.1) 4px), 
@@ -43,7 +46,17 @@ body {
   }
   
   h1 {
-    animation: fadeIn 2s ease-in-out;
-    color: #4556aa;
+    animation: fadeIn 0.25s ease-in-out;
+    color: #3d5475;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+<<<<<<< HEAD
+=======
+  }
+  h2 {
+    color: #5b6879;
+  }
+
+  p {
+    color: #5b6879;
+>>>>>>> 9a2f960e997753429c152892a37c6f9f0ae6aa52
   }

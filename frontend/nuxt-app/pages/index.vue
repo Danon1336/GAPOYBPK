@@ -9,7 +9,6 @@
         <img class="im" src="/img/logo.png" alt="Логотип" />
         <div class="logo-text">
           <h1>StudLink</h1>
-          <p class="college">ГБПОУ БПК</p>
         </div>
       </div>
 
@@ -97,7 +96,6 @@
 
 .subtitle {
   font-size: 38pt;
-  color: #555;
   margin: 20px 0;
 }
 

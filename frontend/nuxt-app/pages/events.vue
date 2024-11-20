@@ -18,7 +18,7 @@
             <div class="divider"></div>
             <nuxt-link to="/" class="menu-item">Обратная связь</nuxt-link>
         </div>
-        <img src="public/img/student.png" alt="" />
+        <nuxt-link to="account" class="menu-item"><img src="public/img/student.png" alt="" /></nuxt-link>
         </nav>
         <div class="divider1"></div>
 
