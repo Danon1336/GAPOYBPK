@@ -47,10 +47,16 @@ body {
   
   h1 {
     animation: fadeIn 0.25s ease-in-out;
-    color: #3d5475;
+    color: #0f4265;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   }
   h2 {
+    color: #5b6879;
+  }
+  h3 {
+    color: #5b6879;
+  }
+  h4 {
     color: #5b6879;
   }
 

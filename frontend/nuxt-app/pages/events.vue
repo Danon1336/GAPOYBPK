@@ -3,7 +3,7 @@
         <!-- Навигационная панель -->
         <nav class="navbar">
         <div class="logo">
-            <img class="logo-img" src="/img/logo.png" alt="Логотип" />
+            <NuxtLink to="/"><img class="logo-img" src="/img/logo.png" alt="Логотип" /></NuxtLink>
             <NuxtLink to="/"><h1>StudLink</h1></NuxtLink>
         </div>
         <div class="menu">
@@ -12,11 +12,11 @@
             <input class="menu-item" placeholder="Поиск мероприятий" />
             </div>
             <div class="divider"></div>
-            <nuxt-link to="/" class="menu-item">Клубы</nuxt-link>
+            <NuxtLink to="/clubs" class="btn">Клубы</NuxtLink>
             <div class="divider"></div>
-            <nuxt-link to="/" class="menu-item">Студенты</nuxt-link>
+            <NuxtLink to="/chat" class="btn">Чвты</NuxtLink>
             <div class="divider"></div>
-            <nuxt-link to="/" class="menu-item">Обратная связь</nuxt-link>
+            <NuxtLink to="/faq" class="btn">Обратная связь</NuxtLink>
         </div>
         <nuxt-link to="account" class="menu-item"><img src="public/img/student.png" alt="" /></nuxt-link>
         </nav>
