@@ -56,20 +56,6 @@
   padding: 40px;
 }
 
-.left {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 20px;
-  max-width: 60%;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
 .im {
   width: 60px;
   height: 60px;

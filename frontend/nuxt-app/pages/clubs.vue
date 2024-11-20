@@ -190,4 +190,7 @@
     .join-btn:hover {
     background-color: #f0f0f0;
     }
+.btn{
+  padding: 10px 20px;
+}
 </style>

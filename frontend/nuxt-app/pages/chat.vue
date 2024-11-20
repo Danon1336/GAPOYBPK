@@ -484,4 +484,7 @@
         transform: scale(1);
     }
     }
+.btn{
+  padding: 10px 20px;
+}
 </style>

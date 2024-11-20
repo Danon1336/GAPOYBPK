@@ -119,17 +119,6 @@
     flex-direction: column;
     align-items: center;
     }
-
-    /* Навигация */
-    .navbar {
-    width: 100%;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 20px;
-    border-radius: 8px;
-    }
     .logo{
         display:flex;
         align-items: center;
@@ -239,4 +228,7 @@
         flex-wrap: wrap;
     }
     }
+.btn{
+  padding: 10px 20px;
+}
 </style>

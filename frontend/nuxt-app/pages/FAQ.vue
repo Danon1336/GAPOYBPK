@@ -194,4 +194,7 @@
         background-color: #000000;
         color: #ffffff;
     }
+.btn{
+  padding: 10px 20px;
+}
 </style>

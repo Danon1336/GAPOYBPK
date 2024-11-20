@@ -292,4 +292,7 @@ h1{
     width: 100%;
     margin-right: 10px;
 }
+.btn{
+  padding: 10px 20px;
+}
 </style>
