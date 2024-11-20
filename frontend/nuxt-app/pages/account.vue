@@ -3,7 +3,7 @@
         <!-- Навигационная панель -->
         <nav class="navbar">
         <div class="logo">
-            <img class="logo-img" src="/img/logo.png" alt="Логотип" />
+            <NuxtLink to="/"><img class="logo-img" src="/img/logo.png" alt="Логотип" /></NuxtLink>
             <NuxtLink to="/"><h1>StudLink</h1></NuxtLink>
         </div>
         <div class="menu">
@@ -111,7 +111,7 @@
     /* Основной стиль */
     .account-page {
     font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom right, #ffe3ed, #f9c4d2);
+
     min-height: 100vh;
     padding: 20px;
     display: flex;
