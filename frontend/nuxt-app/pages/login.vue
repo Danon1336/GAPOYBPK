@@ -140,4 +140,8 @@ button:hover {
     color: #333;
     transition: 0.3s;
 }
+.logo img{
+    width: 100px;
+    height: 100px;
+}
 </style>

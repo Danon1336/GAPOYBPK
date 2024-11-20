@@ -142,6 +142,7 @@
     .faq-form p {
         text-align: left;
         font-size: 1.5rem;
+        color: #000;
     }
     .faq-form .name {
         font-size: 2rem !important;
@@ -194,7 +195,7 @@
         background-color: #000000;
         color: #ffffff;
     }
-.btn{
-  padding: 10px 20px;
-}
+    .btn{
+    padding: 10px 20px;
+    }
 </style>
