@@ -39,7 +39,7 @@
                 <input v-model="login" type="text" placeholder="Логин" />
                 <input v-model="password" type="password" placeholder="Пароль" />
                 <button type="submit">Войти</button>
-                <NuxtLink to="/register" class="btn">Нет Аккаунта</NuxtLink>
+                <NuxtLink to="/register" class="btn">Нет aккаунта</NuxtLink>
             </form>
         </div>
         </div>
@@ -56,6 +56,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Munson';
+    text-decoration: none;
     }
 .container {
     display: flex;
