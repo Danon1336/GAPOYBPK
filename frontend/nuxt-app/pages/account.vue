@@ -1,19 +1,18 @@
 <template>
     <div class="account-page">
         <!-- Навигационная панель -->
-        <nav id="navbar">
-            <div class="logo">
-                <NuxtLink to="/"><img class="logo-img" src="/img/logo.png" alt="Логотип" /></NuxtLink>
-                <NuxtLink to="/"><h1>StudLink</h1></NuxtLink>
-            </div>
-                <div class="menu">
-                    <div class="divider"></div>
-                    <nuxt-link to="/events" class="btn">Мероприятия</nuxt-link>
-                    <div class="divider"></div>
-                    <nuxt-link to="/clubs" class="btn">Клубы</nuxt-link>
-                    <div class="divider"></div>
-                    <nuxt-link to="/faq" class="btn">Помощь</nuxt-link>
-                </div>
+        <nav class="navbar">
+        <div class="logo">
+            <NuxtLink to="/"><img class="logo-img" src="/img/logo.png" alt="Логотип" /></NuxtLink>
+            <NuxtLink to="/"><h1>StudLink</h1></NuxtLink>
+        </div>
+        <div class="menu">
+        <NuxtLink to="/clubs" class="btn">Клубы</NuxtLink>
+        <div class="divider"></div>
+        <NuxtLink to="/chat" class="btn">Чаты</NuxtLink>
+        <div class="divider"></div>
+        <NuxtLink to="/faq" class="btn">Обратная связь</NuxtLink>
+        </div>
         <nuxt-link to="account" class="menu-item"><img src="public/img/student.png" alt="" /></nuxt-link>
         </nav>
         <div class="divider1"></div>
@@ -22,23 +21,22 @@
         <div class="content">
         <h2>Ваш профиль</h2>
         <form class="profile-form" @submit.prevent="saveProfile">
+            <div class="formUP">
+                <div class="form-group">
+                <input type="text" id="login" v-model="profile.login" disabled />
+                </div>
+
+                <div class="form-group">
+                <input type="text" id="role" v-model="profile.role" disabled />
+                </div>
+            </div>
+                
+
             <div class="form-group">
-            <label for="login">Логин:</label>
-            <input type="text" id="login" v-model="profile.login" disabled />
+                <input type="email" id="email" v-model="profile.email" />
             </div>
 
             <div class="form-group">
-            <label for="role">Роль:</label>
-            <input type="text" id="role" v-model="profile.role" disabled />
-            </div>
-
-            <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" v-model="profile.email" />
-            </div>
-
-            <div class="form-group">
-            <label for="specialty">Специальность:</label>
             <input type="text" id="specialty" v-model="profile.specialty" disabled />
             </div>
 
@@ -109,30 +107,10 @@
 </script>
 
 <style scoped>
-    /* Основной стиль */
-    .account-page {
-    font-family: Arial, sans-serif;
-
-    min-height: 100vh;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    }
-    #navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    backdrop-filter: blur(4px);
-    }
-    #navbar img{
-        width: 80px;
-        height: 80px;
-    }
     .menu {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 15px;
     }
 
@@ -146,8 +124,8 @@
     /* Контент */
     .content {
     background: #fff;
-    width: 100%;
-    max-width: 600px;
+    width: 80%;
+    margin: 0 auto;
     padding: 30px;
     border-radius: 16px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -164,6 +142,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 100%;
     }
 
     /* Выпадающий список */
@@ -194,12 +173,6 @@
     align-items: center;
     gap: 10px;
     }
-
-    /* Кнопки */
-    
-
-    
-
     /* Адаптивность */
     @media (max-width: 768px) {
     .content {
@@ -210,7 +183,27 @@
         flex-wrap: wrap;
     }
     }
-.btn{
-  padding: 10px 20px;
-}
+    .btn{
+    padding: 10px 20px;
+    }
+    .formUP{
+        display: flex;
+        gap: 10%;
+        justify-content: center;
+    }
+    .form-group input{
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+    }
+    #email{
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+    }
+    #specialty{
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+    }
 </style>

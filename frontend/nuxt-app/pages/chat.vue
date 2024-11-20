@@ -7,14 +7,13 @@
             <NuxtLink to="/"><h1>StudLink</h1></NuxtLink>
         </div>
         <div class="menu">
-            <nuxt-link to="/" class="menu-item">Поиск пользователей</nuxt-link>
-            <nuxt-link to="/events" class="menu-item">Мероприятия</nuxt-link>
-            <nuxt-link to="/clubs" class="menu-item">Клуб</nuxt-link>
-            <nuxt-link to="/faq" class="menu-item">Обратная связь</nuxt-link>
-            <div class="profile-icon">
-            <img src="/img/student.png" alt="Профиль" />
-            </div>
+        <NuxtLink to="/clubs" class="btn">Клубы</NuxtLink>
+        <div class="divider"></div>
+        <NuxtLink to="/chat" class="btn">Чаты</NuxtLink>
+        <div class="divider"></div>
+        <NuxtLink to="/faq" class="btn">Обратная связь</NuxtLink>
         </div>
+        <nuxt-link to="account" class="menu-item"><img src="public/img/student.png" alt="" /></nuxt-link>
         </nav>
 
         <!-- Основной контент -->
@@ -305,7 +304,7 @@
     .user-avatar {
     width: 30px;
     height: 30px;
-    background-color: #007bff;
+    background-color: #647485;
     border-radius: 50%;
     margin-right: 10px;
     }
@@ -413,7 +412,7 @@
     }
 
     .chat-header {
-    background-color: #007bff;
+    background-color: #607b97;
     color: white;
     padding: 10px;
     text-align: center;

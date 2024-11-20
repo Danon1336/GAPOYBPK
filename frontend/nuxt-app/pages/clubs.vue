@@ -1,25 +1,23 @@
 <template>
     <div class="club-page">
-        <!-- Навигация -->
         <nav class="navbar">
         <div class="logo">
             <NuxtLink to="/"><img class="logo-img" src="/img/logo.png" alt="Логотип" /></NuxtLink>
             <NuxtLink to="/"><h1>StudLink</h1></NuxtLink>
         </div>
         <div class="menu">
-            <nuxt-link to="/" class="menu-item">Мероприятия</nuxt-link>
-            <nuxt-link to="/students" class="menu-item">Студенты</nuxt-link>
-            <nuxt-link to="/feedback" class="menu-item">Обратная связь</nuxt-link>
-            <div class="profile-icon">
-            <img src="/img/student.png" alt="Профиль" />
-            </div>
+        <NuxtLink to="/clubs" class="btn">Клубы</NuxtLink>
+        <div class="divider"></div>
+        <NuxtLink to="/chat" class="btn">Чаты</NuxtLink>
+        <div class="divider"></div>
+        <NuxtLink to="/faq" class="btn">Обратная связь</NuxtLink>
         </div>
+        <nuxt-link to="account" class="menu-item"><img src="public/img/student.png" alt="" /></nuxt-link>
         </nav>
 
         <!-- Контент страницы -->
         <div class="club-content">
         <h2>КЛУБЫ КОЛЛЕДЖА</h2>
-        <button class="category-btn">📂 Категории</button>
         <div class="clubs-list">
             <div class="club-card" v-for="club in clubs" :key="club.id">
             <div class="club-image">

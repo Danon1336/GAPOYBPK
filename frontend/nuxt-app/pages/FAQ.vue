@@ -6,11 +6,6 @@
         <NuxtLink to="/"><h1>StudLink</h1></NuxtLink>
     </div>
     <div class="menu">
-        <div class="search">
-            <img src="public/img/search.png" alt="" />
-            <input class="menu-item" placeholder="Поиск мероприятий" />
-        </div>
-     <div class="divider"></div>
     <NuxtLink to="/clubs" class="btn">Клубы</NuxtLink>
     <div class="divider"></div>
     <NuxtLink to="/chat" class="btn">Чаты</NuxtLink>
@@ -49,11 +44,10 @@
                 <p class="name">Отправьте нам сообщения</p>
                 <p class="info">Если y вас есть какие-то вопросы, тех.проблемы,<br>предложения по улучшению, жалобы на пользователей</p>
                 
-                <!-- СМЕНИТЬ ССЫЛКИ НА ВСЕ -->
-                <form method="post" action="#" class="formall">
+                <form class="formall">
                     <input type="text" name="#" placeholder="ваш email" class="insert">
                     <textarea type="text" name="#" placeholder="сообщение"></textarea>
-                    <button type="submit" class="btn">отправить</button>
+                    <button class="btn" id="btn" >отправить</button>
                 </form>
             </article>
 
@@ -191,11 +185,16 @@
         margin-top: 10px;
         transition: .5s ease-in-out;
     }
-    .faq-form form button:hover {
-        background-color: #000000;
-        color: #ffffff;
-    }
     .btn{
     padding: 10px 20px;
+    }
+    #btn{
+        background-color: #000000;
+        color: #ffffff;
+        cursor: pointer;
+    }
+    #btn:hover{
+        background-color: #D0E1F9;
+        color: #000000;
     }
 </style>

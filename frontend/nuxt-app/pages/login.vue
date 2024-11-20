@@ -114,7 +114,7 @@ h1 {
 }
 .form .btn{
     font-size: 16pt;
-    color: #ffffff;
+    color: #000000;
     transition: 0.3s;
 }
 input {
@@ -141,7 +141,7 @@ button:hover {
 }
 .btn{
     font-size: 16pt;
-    color: #ffffff;
+    color: #000000;
     transition: 0.3s;
 }
 .logo img{

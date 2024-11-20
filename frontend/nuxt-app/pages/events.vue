@@ -1,5 +1,6 @@
 <template>
     <div class="page-container">
+        <br>
         <!-- Навигационная панель -->
         <nav class="navbar">
         <div class="logo">
@@ -7,18 +8,13 @@
             <NuxtLink to="/"><h1>StudLink</h1></NuxtLink>
         </div>
         <div class="menu">
-            <div class="search">
-                <img src="public/img/search.png" alt="" />
-                <input class="menu-item" placeholder="Поиск мероприятий" />
-            </div>
-        <div class="divider"></div>
         <NuxtLink to="/clubs" class="btn">Клубы</NuxtLink>
         <div class="divider"></div>
         <NuxtLink to="/chat" class="btn">Чаты</NuxtLink>
         <div class="divider"></div>
         <NuxtLink to="/faq" class="btn">Обратная связь</NuxtLink>
         </div>
-        <nuxt-link to="account" class="menu-item"><img src="public/img/student.png" alt="" /></nuxt-link>
+        <NuxtLink to="/account" class="btn">Профиль</NuxtLink>
         </nav>
         <div class="divider1"></div>
 
@@ -80,13 +76,19 @@
         <!-- Постоянное мероприятие -->
         <div class="persistent-event">
             <h2 class="event-title">Хакатон</h2>
-            <p class="event-date">19.10.24 - 21.10.24</p>
+            <h2 class="event-date">Дата: 19.10.24 - 21.10.24</h2>
+            <div class="divider1"></div>
             <p class="event-description">
+            <h2>Описание</h2><br>
             19 ноября в Республике Башкортостан на базе Белорецкого педагогического колледжа стартовал региональный этап
             Всероссийского конкурса «Моя профессия – ИТ» - категория Б (студенты)!
             </p>
-            <p class="event-location">Место: Белорецк</p>
-            <p class="event-organizer">Организатор: БПК</p>
+            <div class="divider1"></div>
+            <div class="about">
+                <p class="event-location">Место: <b>Белорецк</b></p>
+                <p class="event-organizer">Организатор: <b>БПК</b></p>
+            </div>
+                
             <iframe src="https://vk.com/video_ext.php?oid=-153401417&id=456239519&hd=3" width="100%" height="400px" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>
         </div>
         <div class="events">
@@ -160,11 +162,10 @@
 h1{
     color: black;
 }
-.page-container {
-    padding: 0;
-    margin: 0;
-}
+.persistent-event h2{
+    text-align: center;
 
+}
 .logo {
     display: flex;
     align-items: center;
@@ -182,18 +183,11 @@ h1{
     padding: 40px;
 }
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .title {
     font-size: 32px;
     color: #333;
 }
 
-/* Карточки мероприятий */
 .events {
     margin-top: 30px;
     display: grid;
@@ -220,11 +214,6 @@ h1{
 .event-organizer {
     font-size: 14px;
     color: #555;
-}
-.event{
-    display: flex;
-    align-items: center;
-    gap: 20px;
 }
 .event img{
     width: 30px;
@@ -267,13 +256,14 @@ h1{
     font-size: 22px;
     font-weight: bold;
     color: #333;
+    text-align: center;
     }
 
 .persistent-event .event-date,
 .persistent-event .event-description,
 .persistent-event .event-location,
 .persistent-event .event-organizer {
-    font-size: 14px;
+    font-size: 14pt;
     color: #555;
     margin-bottom: 10px;
     padding: 10px 20px;
@@ -282,9 +272,6 @@ h1{
 .persistent-event img{
     width: 100%;
     margin-right: 10px;
-}
-.btn{
-  padding: 10px 20px;
 }
 .add-event-form{
     background: #71a3a1;
@@ -298,5 +285,36 @@ h1{
     padding: 10px 20px;
     outline: none;
     border: 1px solid black;
+}
+
+.persistent-event p{
+    font-size: 24pt;
+}
+.about{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+iframe{
+    border-radius: 18px;
+}
+.btn{
+    padding: 10px 20px;
+    border-radius: 18px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+    font-size: 20pt;
+    background: #f9f9f9;
+}
+.divider1{
+    margin-top: 12px;
+}
+.event{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
 }
 </style>
