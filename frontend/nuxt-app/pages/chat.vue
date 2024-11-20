@@ -3,7 +3,7 @@
         <!-- Навигационная панель -->
         <nav class="navbar">
         <div class="logo">
-            <img class="logo-img" src="/img/logo.png" alt="Логотип" />
+            <NuxtLink to="/"><img class="logo-img" src="/img/logo.png" alt="Логотип" /></NuxtLink>
             <NuxtLink to="/"><h1>StudLink</h1></NuxtLink>
         </div>
         <div class="menu">

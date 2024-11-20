@@ -8,15 +8,15 @@
         </div>
         <div class="menu">
             <div class="search">
-            <img src="public/img/search.png" alt="" />
-            <input class="menu-item" placeholder="Поиск мероприятий" />
+                <img src="public/img/search.png" alt="" />
+                <input class="menu-item" placeholder="Поиск мероприятий" />
             </div>
-            <div class="divider"></div>
-            <NuxtLink to="/clubs" class="btn">Клубы</NuxtLink>
-            <div class="divider"></div>
-            <NuxtLink to="/chat" class="btn">Чвты</NuxtLink>
-            <div class="divider"></div>
-            <NuxtLink to="/faq" class="btn">Обратная связь</NuxtLink>
+        <div class="divider"></div>
+        <NuxtLink to="/clubs" class="btn">Клубы</NuxtLink>
+        <div class="divider"></div>
+        <NuxtLink to="/chat" class="btn">Чаты</NuxtLink>
+        <div class="divider"></div>
+        <NuxtLink to="/faq" class="btn">Обратная связь</NuxtLink>
         </div>
         <nuxt-link to="account" class="menu-item"><img src="public/img/student.png" alt="" /></nuxt-link>
         </nav>
@@ -36,9 +36,53 @@
             </div>
             <h1 class="title">Мероприятия</h1>
             </div>
-            <button class="btn" @click="showAddEventForm = !showAddEventForm">
-            Добавить мероприятие
-            </button>
+            <div class="dropdown">
+                <button class="btn" @click="showAddEventForm = !showAddEventForm">
+                Добавить мероприятие
+                </button>
+                    <form
+                        v-if="showAddEventForm"
+                        class="add-event-form"
+                        @submit.prevent="addEvent">
+                        <input
+                        type="text"
+                        v-model="newEvent.title"
+                        placeholder="Название мероприятия"
+                        required
+                        />
+                        <input
+                        type="date"
+                        v-model="newEvent.startDate"
+                        placeholder="Дата начала"
+                        required
+                        />
+                        <input
+                        type="date"
+                        v-model="newEvent.endDate"
+                        placeholder="Дата окончания"
+                        required
+                        />
+                        <textarea
+                        v-model="newEvent.description"
+                        placeholder="Описание"
+                        rows="3"
+                        required
+                        ></textarea>
+                        <input
+                        type="text"
+                        v-model="newEvent.location"
+                        placeholder="Место проведения"
+                        required
+                        />
+                        <input
+                        type="text"
+                        v-model="newEvent.organizer"
+                        placeholder="Организаторы"
+                        required
+                        />
+                        <button type="submit" class="btn">Сохранить</button>
+                    </form>
+            </div>
         </div>
 
         <!-- Постоянное мероприятие -->
@@ -55,50 +99,7 @@
         </div>
 
         <!-- Форма добавления мероприятия -->
-        <form
-            v-if="showAddEventForm"
-            class="add-event-form"
-            @submit.prevent="addEvent"
-        >
-            <input
-            type="text"
-            v-model="newEvent.title"
-            placeholder="Название мероприятия"
-            required
-            />
-            <input
-            type="date"
-            v-model="newEvent.startDate"
-            placeholder="Дата начала"
-            required
-            />
-            <input
-            type="date"
-            v-model="newEvent.endDate"
-            placeholder="Дата окончания"
-            required
-            />
-            <textarea
-            v-model="newEvent.description"
-            placeholder="Описание"
-            rows="3"
-            required
-            ></textarea>
-            <input
-            type="text"
-            v-model="newEvent.location"
-            placeholder="Место проведения"
-            required
-            />
-            <input
-            type="text"
-            v-model="newEvent.organizer"
-            placeholder="Организаторы"
-            required
-            />
-            <button type="submit" class="btn">Сохранить</button>
-        </form>
-
+        
         <!-- Список мероприятий -->
         <div class="events">
             <div class="event-card" v-for="event in events" :key="event.id">
@@ -176,16 +177,6 @@ h1{
     margin: 0;
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 20px 40px;
-}
-.navbar img{
-    width: 80px;
-    height: 80px;
-}
 .logo {
     display: flex;
     align-items: center;
@@ -198,29 +189,6 @@ h1{
     height: 50px;
 }
 
-.menu {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.menu-item {
-    color: #333;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 20pt;
-}
-
-.divider {
-    height: 20px;
-    width: 1px;
-    background-color: black;
-}
-.divider1{
-    width: 100%;
-    height: 1px;
-    background-color: black;
-}
 /* Основной контент */
 .content {
     padding: 40px;
@@ -235,19 +203,6 @@ h1{
 .title {
     font-size: 32px;
     color: #333;
-}
-
-.btn {
-    background-color: #854980;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background-color: #0056b3;
 }
 
 /* Карточки мероприятий */
@@ -278,25 +233,6 @@ h1{
     font-size: 14px;
     color: #555;
 }
-.search{
-    display: flex;
-    align-items: center;
-    background: #000;
-    padding: 10px;
-    border-radius: 20px;
-}
-.search img{
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-}
-.search input{
-    background: none;
-    border: none;
-    outline: none;
-    color: #ffffff;
-    width: 100%;
-}
 .event{
     display: flex;
     align-items: center;
@@ -321,8 +257,11 @@ h1{
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 400px;
+    width: 300px;
+    position: absolute;
+    margin-top: 2%;
     justify-content: center;
+    right: 2%;
 }
 .persistent-event {
     background-color: #f9f9f9;

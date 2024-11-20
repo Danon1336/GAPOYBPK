@@ -100,30 +100,12 @@
   margin: 20px 0;
 }
 
-.buttons {
-  display: flex;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.btn {
-  text-decoration: none;
-  background-color: #105d75;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 16px;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background-color: #4ecbed;
-}
-
 .right {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 12%
 }
 
 .books {
@@ -131,13 +113,11 @@
   height: auto;
 }
 .logotype {
-  width: 46%;
-  height: 28%;
+  width: 80%;
+  height: 80%;
 }
 .btn{
-    font-size: 16pt;
-    color: #ffffff;
-    transition: 0.3s;
+  padding: 10px 20px;
 }
 
 </style>

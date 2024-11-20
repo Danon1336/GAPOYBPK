@@ -7,15 +7,16 @@
             <NuxtLink to="/"><h1>StudLink</h1></NuxtLink>
         </div>
         <div class="menu">
-            <nuxt-link to="/" class="menu-item">Поиск</nuxt-link>
-            <nuxt-link to="/events" class="menu-item">Мероприятия</nuxt-link>
-            <nuxt-link to="/clubs" class="menu-item">Клубы</nuxt-link>
-            <nuxt-link to="/faq" class="menu-item">Помощь</nuxt-link>
-            <div class="profile-icon">
-            <img src="/img/student.png" alt="Профиль" />
-            </div>
+            <div class="divider"></div>
+            <nuxt-link to="/events" class="btn">Мероприятия</nuxt-link>
+            <div class="divider"></div>
+            <nuxt-link to="/clubs" class="btn">Клубы</nuxt-link>
+            <div class="divider"></div>
+            <nuxt-link to="/faq" class="btn">Помощь</nuxt-link>
         </div>
+        <nuxt-link to="account" class="menu-item"><img src="public/img/student.png" alt="" /></nuxt-link>
         </nav>
+        <div class="divider1"></div>
 
         <!-- Основной контент -->
         <div class="content">
@@ -148,12 +149,6 @@
     display: flex;
     align-items: center;
     gap: 15px;
-    }
-
-    .menu-item {
-    color: #e91e63;
-    text-decoration: none;
-    font-weight: bold;
     }
 
     .profile-icon img {

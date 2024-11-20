@@ -3,8 +3,8 @@
         <!-- Навигация -->
         <nav class="navbar">
         <div class="logo">
-            <img class="logo-img" src="/img/logo.png" alt="Логотип" />
-            <h1>StudLink</h1>
+            <NuxtLink to="/"><img class="logo-img" src="/img/logo.png" alt="Логотип" /></NuxtLink>
+            <NuxtLink to="/"><h1>StudLink</h1></NuxtLink>
         </div>
         <div class="menu">
             <nuxt-link to="/" class="menu-item">Мероприятия</nuxt-link>
