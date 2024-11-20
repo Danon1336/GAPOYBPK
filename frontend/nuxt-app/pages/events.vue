@@ -26,15 +26,7 @@
         <div class="content">
         <div class="header">
             <div class="event">
-            <img src="public/img/filter.png" alt="" />
-            <div class="filter">
-                <select v-model="role" name="" id="" placeholder="Категории">
-                <option value="Категории" selected disabled>Категории</option>
-                <option value="Applicant">Абитуриент</option>
-                <option value="Student">Студент</option>
-                </select>
-            </div>
-            <h1 class="title">Мероприятия</h1>
+                <h1 class="title">Мероприятия</h1>
             </div>
             <div class="dropdown">
                 <button class="btn" @click="showAddEventForm = !showAddEventForm">
@@ -272,6 +264,7 @@ h1{
     width:50%;
     height: fit-content;
     margin: 0 auto;
+    margin-top: 3%;
     }
 
 .persistent-event .event-title {

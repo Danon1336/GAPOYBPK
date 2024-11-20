@@ -10,10 +10,6 @@
         <div class="logo-text">
           <h1>StudLink</h1>
         </div>
-        <div class="buttons">
-          <NuxtLink to="/register" class="btn">Войти в систему</NuxtLink>
-          <NuxtLink to="/events" class="btn">Мероприятия</NuxtLink>
-        </div>
       </div>
 
       <div class="content">
@@ -22,7 +18,10 @@
         <h2 class="subtitle">
           Онлайн платформа для общения студентов Белорецкого Педагогического Колледжа
         </h2>
-        
+        <div class="buttonsi">
+          <NuxtLink to="/register" class="btni">Войти в систему</NuxtLink>
+          <NuxtLink to="/events" class="btni">Мероприятия</NuxtLink>
+        </div>
       </div>
     </div>
     <div class="right">
@@ -103,8 +102,24 @@
   width: 80%;
   height: 80%;
 }
-.btn{
+.btni {
+  margin-top: 9%;
+  text-decoration: none;
+  background-color: #105d75;
+  color: white;
   padding: 10px 20px;
+  border-radius: 12px;
+  font-size: 38pt;
+  transition: 0.3s;
 }
+  
+.btni:hover {
+  background-color: #4ecbed;
+}
+.buttonsi {
+    display: flex;
+    gap: 56px;
+    margin-top: 20px;
+  }
 
 </style>
