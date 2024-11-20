@@ -29,8 +29,8 @@
     <div class="container">
     <!-- Верхняя панель -->
         <div class="logo">
-        <img class="im" src="/img/logo.png" alt="Логотип" />
-        <NuxtLink to="/"><h1>StudLink</h1></NuxtLink>
+            <NuxtLink to="/"><img class="logo-img" src="/img/logo.png" alt="Логотип" /></NuxtLink>
+            <NuxtLink to="/"><h1>StudLink</h1></NuxtLink>
         </div>
 
     <!-- Полоска -->

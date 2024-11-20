@@ -1,4 +1,66 @@
 
+<template>
+    <nav class="navbar">
+    <div class="logo">
+        <NuxtLink to="/"><img class="logo-img" src="/img/logo.png" alt="Логотип" /></NuxtLink>
+        <NuxtLink to="/"><h1>StudLink</h1></NuxtLink>
+    </div>
+    <div class="menu">
+        <div class="search">
+            <img src="public/img/search.png" alt="" />
+            <input class="menu-item" placeholder="Поиск мероприятий" />
+        </div>
+     <div class="divider"></div>
+    <NuxtLink to="/clubs" class="btn">Клубы</NuxtLink>
+    <div class="divider"></div>
+    <NuxtLink to="/chat" class="btn">Чаты</NuxtLink>
+    <div class="divider"></div>
+    <NuxtLink to="/faq" class="btn">Обратная связь</NuxtLink>
+    </div>
+    <nuxt-link to="account" class="menu-item"><img src="public/img/student.png" alt="" /></nuxt-link>
+    </nav>
+    <div class="divider1"></div>
+    <main class="FAQ-main">
+        <section class="FAQ-section">
+
+            <article class="contacts">
+                <div class="element-cont">
+                    <img src="public/img/geo.png" style="width: 27px; height: 27px;">
+                    <p class="name">адрес</p>
+                    <p class="info">г. Белорецк,<br>ул. Карла Маркса, д. 85</p>
+                </div>
+
+                <div class="element-cont">
+                    <img src="public/img/phone.png" style="width: 27px; height: 27px;">
+                    <p class="name">телефон</p>
+                    <p class="info">+7 (347) 923-1682<br>+7 (347) 923-1907</p>
+                </div>
+
+                <div class="element-cont">
+                    <img src="public/img/email.png" style="width: 27px; height: 27px;">
+                    <p class="name">email</p>
+                    <p class="info">bpk1932@mail.ru</p>
+                </div>
+            </article>
+
+            <div class="line"></div>
+
+            <article class="faq-form">
+                <p class="name">Отправьте нам сообщения</p>
+                <p class="info">Если y вас есть какие-то вопросы, тех.проблемы,<br>предложения по улучшению, жалобы на пользователей</p>
+                
+                <!-- СМЕНИТЬ ССЫЛКИ НА ВСЕ -->
+                <form method="post" action="#" class="formall">
+                    <input type="text" name="#" placeholder="ваш email" class="insert">
+                    <textarea type="text" name="#" placeholder="сообщение"></textarea>
+                    <button type="submit" class="btn">отправить</button>
+                </form>
+            </article>
+
+        </section>
+    </main>
+</template>
+
 <style>
     @font-face {
         font-family: 'Munson';
@@ -132,46 +194,7 @@
         background-color: #000000;
         color: #ffffff;
     }
+.btn{
+  padding: 10px 20px;
+}
 </style>
-<template>
-
-    <main class="FAQ-main">
-        <section class="FAQ-section">
-
-            <article class="contacts">
-                <div class="element-cont">
-                    <img src="public/img/geo.png" style="width: 27px; height: 27px;">
-                    <p class="name">адрес</p>
-                    <p class="info">г. Белорецк,<br>ул. Карла Маркса, д. 85</p>
-                </div>
-
-                <div class="element-cont">
-                    <img src="public/img/phone.png" style="width: 27px; height: 27px;">
-                    <p class="name">телефон</p>
-                    <p class="info">+7 (347) 923-1682<br>+7 (347) 923-1907</p>
-                </div>
-
-                <div class="element-cont">
-                    <img src="public/img/email.png" style="width: 27px; height: 27px;">
-                    <p class="name">email</p>
-                    <p class="info">bpk1932@mail.ru</p>
-                </div>
-            </article>
-
-            <div class="line"></div>
-
-            <article class="faq-form">
-                <p class="name">Отправьте нам сообщения</p>
-                <p class="info">Если y вас есть какие-то вопросы, тех.проблемы,<br>предложения по улучшению, жалобы на пользователей</p>
-                
-                <!-- СМЕНИТЬ ССЫЛКИ НА ВСЕ -->
-                <form method="post" action="#" class="formall">
-                    <input type="text" name="#" placeholder="ваш email" class="insert">
-                    <textarea type="text" name="#" placeholder="сообщение"></textarea>
-                    <button type="submit" class="btn">отправить</button>
-                </form>
-            </article>
-
-        </section>
-    </main>
-</template>

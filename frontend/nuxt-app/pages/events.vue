@@ -3,7 +3,7 @@
         <!-- Навигационная панель -->
         <nav class="navbar">
         <div class="logo">
-            <img class="logo-img" src="/img/logo.png" alt="Логотип" />
+            <NuxtLink to="/"><img class="logo-img" src="/img/logo.png" alt="Логотип" /></NuxtLink>
             <NuxtLink to="/"><h1>StudLink</h1></NuxtLink>
         </div>
         <div class="menu">
@@ -11,12 +11,12 @@
                 <img src="public/img/search.png" alt="" />
                 <input class="menu-item" placeholder="Поиск мероприятий" />
             </div>
-            <div class="divider"></div>
-            <nuxt-link to="/" class="menu-item">Клубы</nuxt-link>
-            <div class="divider"></div>
-            <nuxt-link to="/" class="menu-item">Студенты</nuxt-link>
-            <div class="divider"></div>
-            <nuxt-link to="/" class="menu-item">Обратная связь</nuxt-link>
+        <div class="divider"></div>
+        <NuxtLink to="/clubs" class="btn">Клубы</NuxtLink>
+        <div class="divider"></div>
+        <NuxtLink to="/chat" class="btn">Чаты</NuxtLink>
+        <div class="divider"></div>
+        <NuxtLink to="/faq" class="btn">Обратная связь</NuxtLink>
         </div>
         <nuxt-link to="account" class="menu-item"><img src="public/img/student.png" alt="" /></nuxt-link>
         </nav>
@@ -177,18 +177,6 @@ h1{
     margin: 0;
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 20px 40px;
-    backdrop-filter: blur(4px);
-    background-color: #d9f5f7;
-}
-.navbar img{
-    width: 80px;
-    height: 80px;
-}
 .logo {
     display: flex;
     align-items: center;
@@ -201,29 +189,6 @@ h1{
     height: 50px;
 }
 
-.menu {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.menu-item {
-    color: #333;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 20pt;
-}
-
-.divider {
-    height: 20px;
-    width: 1px;
-    background-color: black;
-}
-.divider1{
-    width: 100%;
-    height: 1px;
-    background-color: black;
-}
 /* Основной контент */
 .content {
     padding: 40px;
@@ -238,20 +203,6 @@ h1{
 .title {
     font-size: 32px;
     color: #333;
-}
-
-.btn {
-    background-color: #854980;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    right: 2%;
-}
-
-.btn:hover {
-    background-color: #0056b3;
 }
 
 /* Карточки мероприятий */
@@ -281,26 +232,6 @@ h1{
 .event-organizer {
     font-size: 14px;
     color: #555;
-}
-.search{
-    display: flex;
-    align-items: center;
-    background: #ffffff;
-    padding: 10px;
-    border:1px solid black;
-    border-radius: 20px;
-}
-.search img{
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-}
-.search input{
-    background: none;
-    border: none;
-    outline: none;
-    color: #000000;
-    width: 100%;
 }
 .event{
     display: flex;
@@ -360,5 +291,8 @@ h1{
 .persistent-event img{
     width: 100%;
     margin-right: 10px;
+}
+.btn{
+  padding: 10px 20px;
 }
 </style>
