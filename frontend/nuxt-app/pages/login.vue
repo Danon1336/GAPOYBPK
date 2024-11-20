@@ -112,7 +112,11 @@ h1 {
     flex-direction: column;
     gap: 15px;
 }
-  
+.form .btn{
+    font-size: 16pt;
+    color: #ffffff;
+    transition: 0.3s;
+}
 input {
     width: 300px;
     padding: 10px;
@@ -137,7 +141,7 @@ button:hover {
 }
 .btn{
     font-size: 16pt;
-    color: #333;
+    color: #ffffff;
     transition: 0.3s;
 }
 .logo img{

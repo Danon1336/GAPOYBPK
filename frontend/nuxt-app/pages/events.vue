@@ -89,10 +89,6 @@
             <p class="event-organizer">Организатор: БПК</p>
             <iframe src="https://vk.com/video_ext.php?oid=-153401417&id=456239519&hd=3" width="100%" height="400px" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>
         </div>
-
-        <!-- Форма добавления мероприятия -->
-        
-        <!-- Список мероприятий -->
         <div class="events">
             <div class="event-card" v-for="event in events" :key="event.id">
             <h2 class="event-title">{{ event.title }}</h2>

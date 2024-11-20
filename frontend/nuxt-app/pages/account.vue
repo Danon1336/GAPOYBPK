@@ -1,19 +1,19 @@
 <template>
     <div class="account-page">
         <!-- Навигационная панель -->
-        <nav class="navbar">
-        <div class="logo">
-            <NuxtLink to="/"><img class="logo-img" src="/img/logo.png" alt="Логотип" /></NuxtLink>
-            <NuxtLink to="/"><h1>StudLink</h1></NuxtLink>
-        </div>
-        <div class="menu">
-            <div class="divider"></div>
-            <nuxt-link to="/events" class="btn">Мероприятия</nuxt-link>
-            <div class="divider"></div>
-            <nuxt-link to="/clubs" class="btn">Клубы</nuxt-link>
-            <div class="divider"></div>
-            <nuxt-link to="/faq" class="btn">Помощь</nuxt-link>
-        </div>
+        <nav id="navbar">
+            <div class="logo">
+                <NuxtLink to="/"><img class="logo-img" src="/img/logo.png" alt="Логотип" /></NuxtLink>
+                <NuxtLink to="/"><h1>StudLink</h1></NuxtLink>
+            </div>
+                <div class="menu">
+                    <div class="divider"></div>
+                    <nuxt-link to="/events" class="btn">Мероприятия</nuxt-link>
+                    <div class="divider"></div>
+                    <nuxt-link to="/clubs" class="btn">Клубы</nuxt-link>
+                    <div class="divider"></div>
+                    <nuxt-link to="/faq" class="btn">Помощь</nuxt-link>
+                </div>
         <nuxt-link to="account" class="menu-item"><img src="public/img/student.png" alt="" /></nuxt-link>
         </nav>
         <div class="divider1"></div>
@@ -119,21 +119,17 @@
     flex-direction: column;
     align-items: center;
     }
-    .logo{
-        display:flex;
-        align-items: center;
-
+    #navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    backdrop-filter: blur(4px);
     }
-    .logo img{
-        width: 40px;
-        height: 40px;
-        object-fit: contain;
+    #navbar img{
+        width: 80px;
+        height: 80px;
     }
-    .logo h1 {
-    font-size: 20px;
-    color: #e91e63;
-    }
-
     .menu {
     display: flex;
     align-items: center;
@@ -159,7 +155,7 @@
     }
 
     h2 {
-    color: #e91e63;
+    color: #105d75;
     text-align: center;
     margin-bottom: 20px;
     }
@@ -172,7 +168,7 @@
 
     /* Выпадающий список */
     .dropdown-btn {
-    background-color: #e91e63;
+    background-color: #105d75;
     color: white;
     border: none;
     padding: 10px;
@@ -200,23 +196,9 @@
     }
 
     /* Кнопки */
-    .save-btn {
-    background-color: #e91e63;
-    color: white;
-    border: none;
-    padding: 12px;
-    border-radius: 8px;
-    cursor: pointer;
-    }
+    
 
-    .back-btn {
-    background-color: #ffc1e3;
-    color: white;
-    border: none;
-    padding: 12px;
-    border-radius: 8px;
-    cursor: pointer;
-    }
+    
 
     /* Адаптивность */
     @media (max-width: 768px) {

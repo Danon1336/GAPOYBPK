@@ -160,11 +160,12 @@ button:hover {
 
 .btn{
     font-size: 16pt;
-    color: #333;
+    color: #ffffff;
     transition: 0.3s;
 }
 .logo img{
     width: 100px;
     height: 100px;
 }
+
 </style>
