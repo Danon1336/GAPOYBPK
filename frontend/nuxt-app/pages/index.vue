@@ -120,9 +120,11 @@
 }
 
 .right {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 12%
 }
 
 .books {
@@ -130,8 +132,8 @@
   height: auto;
 }
 .logotype {
-  width: 46%;
-  height: 28%;
+  width: 80%;
+  height: 80%;
 }
 .btn{
     font-size: 16pt;
