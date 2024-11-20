@@ -44,6 +44,7 @@
                 <input v-model="email" type="email" placeholder="Email" />
                 <input v-model="password" type="password" placeholder="Пароль" />
                 <select v-model="role" name="" id="">
+                    <option value="" disabled selected>Выберите роль</option>
                     <option value="Applicant">Абитуриент</option>
                     <option value="Student">Студент</option>
                 </select>

@@ -276,6 +276,8 @@ h1{
     font-size: 14px;
     color: #555;
     margin-bottom: 10px;
+    padding: 10px 20px;
+    border-radius: 18px;
     }
 .persistent-event img{
     width: 100%;
@@ -283,5 +285,18 @@ h1{
 }
 .btn{
   padding: 10px 20px;
+}
+.add-event-form{
+    background: #71a3a1;
+    padding: 10px 20px;
+    border-radius:18px;
+}
+.add-event-form textarea,
+.add-event-form input
+{
+    border-radius: 18px;
+    padding: 10px 20px;
+    outline: none;
+    border: 1px solid black;
 }
 </style>
