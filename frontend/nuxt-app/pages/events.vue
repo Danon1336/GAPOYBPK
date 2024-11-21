@@ -310,4 +310,179 @@ iframe{
     gap: 20px;
     justify-content: center;
 }
+/* Плавающая кнопка добавления мероприятия */
+.add-event-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #71a3a1;
+    color: white;
+    font-size: 32px;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-event-btn:hover {
+    background-color: #5a8f8c;
+}
+
+/* Остальной стиль */
+.add-event-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 300px;
+    position: absolute;
+    margin-top: 2%;
+    justify-content: center;
+    right: 2%;
+    background: #71a3a1;
+    padding: 10px 20px;
+    border-radius: 18px;
+}
+
+.add-event-form textarea,
+.add-event-form input {
+    border-radius: 18px;
+    padding: 10px 20px;
+    outline: none;
+    border: 1px solid black;
+}
+
+.add-event-form button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 18px;
+    border: none;
+    cursor: pointer;
+}
+
+.add-event-form button:hover {
+    background-color: #555;
+}
+@media (max-width: 414px) {
+    .content {
+        padding: 20px;
+    }
+
+    .events {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .event-card {
+        padding: 15px;
+    }
+
+    .event-title {
+        font-size: 18px;
+    }
+
+    .event-date,
+    .event-description,
+    .event-location,
+    .event-organizer {
+        font-size: 12px;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .navbar .logo h1 {
+        font-size: 18px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+
+    .add-event-form {
+        width: 90%;
+        margin: 0 auto;
+        right: 0;
+        padding: 15px;
+    }
+
+    .persistent-event {
+        width: 100%;
+        padding: 10px;
+        margin: 10px auto;
+    }
+
+    .persistent-event p {
+        font-size: 16px;
+    }
+
+    iframe {
+        height: 200px;
+    }
+
+    .about {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .filter select {
+        width: 100px;
+    }
+
+    .event img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .dropdown button {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #71a3a1;
+        color: white;
+        font-size: 12px;
+        line-height: 50px;
+        text-align: center;
+        border: none;
+    }
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .menu {
+        flex-direction: column;
+    }
+    .btn {
+        font-size: 14px;
+    }
+    .event-card {
+        padding: 15px;
+    }
+    h1 {
+        font-size: 18px;
+    }
+    p {
+        font-size: 12px;
+    }
+    .divider{
+        display: none;
+    }
+}
+
 </style>

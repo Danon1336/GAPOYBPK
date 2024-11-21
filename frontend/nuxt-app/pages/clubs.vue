@@ -22,14 +22,11 @@
         <h2>КЛУБЫ КОЛЛЕДЖА</h2>
         <div class="clubs-list">
             <div class="club-card" v-for="club in clubs" :key="club.id">
-            <div class="club-image">
-                <img :src="club.image" alt="Изображение клуба" />
-            </div>
-            <div class="club-details">
-                <h3>{{ club.name }}</h3>
-                <p>{{ club.description }}</p>
-                <button class="join-btn">Вступить!</button>
-            </div>
+                <div class="club-details">
+                    <h3>{{ club.name }}</h3>
+                    <p>{{ club.description }}</p>
+                    <button class="join-btn">Вступить!</button>
+                </div>
             </div>
         </div>
         </div>
@@ -45,19 +42,16 @@
             id: 1,
             name: "Программирование",
             description: "Описание клуба",
-            image: "/img/progr.png",
             },
             {
             id: 2,
             name: "Футбол",
             description: "Описание клуба",
-            image: "/img/soccer.png",
             },
             {
             id: 3,
             name: "Волейбол",
             description: "Описание клуба",
-            image: "/img/volleyball.png",
             },
         ],
         };
@@ -180,7 +174,131 @@
     .join-btn:hover {
     background-color: #f0f0f0;
     }
-.btn{
-  padding: 10px 20px;
+    .btn{
+    padding: 10px 20px;
+    
+    }
+@media (max-width: 414px) {
+    .content {
+        padding: 20px;
+    }
+    .club-details h3{
+        font-size: 16px;
+    }
+
+    .navbar .logo h1 {
+        font-size: 18px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+
+    .add-event-form {
+        width: 90%;
+        margin: 0 auto;
+        right: 0;
+        padding: 15px;
+    }
+
+    .persistent-event {
+        width: 100%;
+        padding: 10px;
+        margin: 10px auto;
+    }
+
+    .persistent-event p {
+        font-size: 16px;
+    }
+
+    iframe {
+        height: 200px;
+    }
+
+    .about {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .filter select {
+        width: 100px;
+    }
+
+    .event img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .dropdown button {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #71a3a1;
+        color: white;
+        font-size: 12px;
+        line-height: 50px;
+        text-align: center;
+        border: none;
+    }
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .menu {
+        flex-direction: column;
+    }
+    .btn {
+        font-size: 14px;
+    }
+    .event-card {
+        padding: 15px;
+    }
+    h1 {
+        font-size: 18px;
+    }
+    p {
+        font-size: 12px;
+    }
+    .divider{
+        display: none;
+    }
+    .club-card{
+        width: 200px;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .navbar .logo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .navbar .menu {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .navbar .btn {
+        width: 100%;
+        text-align: left;
+        padding: 10px;
+    }
+
+    .divider {
+        display: none;
+    }
 }
+
 </style>

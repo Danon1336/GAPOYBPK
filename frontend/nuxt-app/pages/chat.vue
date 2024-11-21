@@ -467,7 +467,19 @@
         transform: scale(1);
     }
     }
-.btn{
-  padding: 10px 20px;
-}
+    .btn{
+    padding: 10px 20px;
+    }
+    @media (max-width:768px){
+        .sidebar {
+            width: 100%;
+            padding: 0;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            padding: 10px 20px
+        }
+    }
 </style>

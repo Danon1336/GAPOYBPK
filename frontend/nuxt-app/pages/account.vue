@@ -59,9 +59,9 @@
                     </ul>
                 </div>
             </div>
-            <div style="display: flex; justify-content: center; flex-direction: column; align-items: center; gap:30px">
-                <button type="submit" class="save-btn" style="font-size: 24pt; width: 30%">Сохранить</button>
-                <button type="button" class="back-btn" @click="goToMain" style="font-size: 24pt; width: 30%">Назад</button>
+            <div style="display: flex; justify-content: center; flex-direction: column; align-items: center; gap:30px" class="brns">
+                <button type="submit" class="save-btn" style="">Сохранить</button>
+                <button type="button" class="back-btn" @click="goToMain">Назад</button>
             </div>
                 
         </form>
@@ -177,6 +177,15 @@
     align-items: center;
     gap: 10px;
     }
+    .brns{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    .brns button{
+        font-size: 24pt; 
+        width: 30%;
+    }
     /* Адаптивность */
     @media (max-width: 768px) {
     .content {
@@ -213,5 +222,26 @@
         padding: 10px;
         border-radius: 8px;
         font-size: 24pt;
+    }
+    @media(max-width:768px) {
+        .form-group{
+            width: 93%;
+            justify-content: center;
+        }
+        .formUP{
+            margin-right: 20px;
+        }
+        .brns .save-btn{
+            font-size: 14px;
+        }
+        .account-page{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 10px 20px;
+        }
     }
 </style>

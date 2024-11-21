@@ -1,35 +1,32 @@
-<script setup lang="ts">
-</script>
-
 <template>
   <div :style="{ backgroundColor: '#D0E1F9' }">
     <div class="container">
-    <div class="left">
-      <div class="logo">
-        <img class="im" src="/img/logo.png" alt="Логотип" />
-        <div class="logo-text">
-          <h1>StudLink</h1>
-          <p class="college">ГБПОУ БПК</p>
+      <div class="left">
+        <div class="logo">
+          <img class="im" src="/img/logo.png" alt="Логотип" />
+          <div class="logo-text">
+            <h1>StudLink</h1>
+            <p class="college">ГБПОУ БПК</p>
+          </div>
+        </div>
+
+        <div class="content">
+          <h1 class="title">Начни общение сейчас</h1>
+          <h2 class="subtitle">
+            Онлайн платформа для общения студентов Белорецкого Педагогического Колледжа
+          </h2>
+          <div class="buttons">
+            <NuxtLink to="/register" class="btn">Войти в систему</NuxtLink>
+            <NuxtLink to="/events" class="btn">Мероприятия</NuxtLink>
+          </div>
         </div>
       </div>
 
-      <div class="content">
-        <h1 class="title">Начни общение сейчас</h1>
-        <h2 class="subtitle">
-          Онлайн платформа для общения студентов Белорецкого Педагогического Колледжа
-        </h2>
-        <div class="buttons">
-          <NuxtLink to="/register" class="btn" id="dtn" style="border-top-left-radius: 14px; border-bottom-right-radius: 14px;">Войти в систему</NuxtLink>
-          <NuxtLink to="/events" class="btn" id="dtn" style="border-top-left-radius: 14px; border-bottom-right-radius: 14px;">Мероприятия</NuxtLink>
-        </div>
+      <div class="right">
+        <img src="/img/logotype.png" alt="Логотип" />
+        <img class="books" src="/img/books.png" alt="Книги" />
       </div>
     </div>
-
-    <div class="right">
-      <img src="/img/logotype.png" alt="">
-      <img class="books" src="/img/books.png" alt="Книги" />
-    </div>
-  </div>
   </div>
 </template>
 
@@ -114,8 +111,8 @@
   background-color: #333;
   color: white;
   padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 38pt;
+  border-radius: 14px;
+  font-size: 16pt;
   transition: 0.3s;
 }
 
@@ -135,14 +132,54 @@
   width: 600px;
   height: auto;
 }
-.btn{
-    font-size: 16pt;
-    color: #ffffff;
-    transition: 0.3s;
-}
-#dtn{
-  font-size: 38pt;
-  padding: 10px 20px;
-  margin-top: 9%
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    height: auto;
+  }
+
+  .left {
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo {
+    justify-content: center;
+  }
+
+  .content {
+    margin-top: 10px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .right {
+    margin-top: 20px;
+  }
+
+  .books {
+    width: 100%;
+    max-width: 300px;
+  }
 }
 </style>
