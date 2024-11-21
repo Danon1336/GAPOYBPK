@@ -19,8 +19,8 @@
           Онлайн платформа для общения студентов Белорецкого Педагогического Колледжа
         </h2>
         <div class="buttons">
-          <NuxtLink to="/register" class="btn" id="dtn">Войти в систему</NuxtLink>
-          <NuxtLink to="/events" class="btn" id="dtn">Мероприятия</NuxtLink>
+          <NuxtLink to="/register" class="btn" id="dtn" style="border-top-left-radius: 14px; border-bottom-right-radius: 14px;">Войти в систему</NuxtLink>
+          <NuxtLink to="/events" class="btn" id="dtn" style="border-top-left-radius: 14px; border-bottom-right-radius: 14px;">Мероприятия</NuxtLink>
         </div>
       </div>
     </div>
@@ -55,6 +55,7 @@
   align-items: flex-start;
   height: 100vh;
   padding: 40px;
+  background: #D0E1F9;
 }
 
 .left {

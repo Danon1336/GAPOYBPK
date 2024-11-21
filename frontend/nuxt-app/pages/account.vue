@@ -12,8 +12,10 @@
         <NuxtLink to="/chat" class="btn">Чаты</NuxtLink>
         <div class="divider"></div>
         <NuxtLink to="/faq" class="btn">Обратная связь</NuxtLink>
+        <div class="divider"></div>
+        <NuxtLink to="/events" class="btn">Мероприятия</NuxtLink>
         </div>
-        <nuxt-link to="account" class="menu-item"><img src="public/img/student.png" alt="" /></nuxt-link>
+        <NuxtLink to="/account" class="btn">Профиль</NuxtLink>
         </nav>
         <div class="divider1"></div>
 
@@ -23,11 +25,11 @@
         <form class="profile-form" @submit.prevent="saveProfile">
             <div class="formUP">
                 <div class="form-group">
-                <input type="text" id="login" v-model="profile.login" disabled />
+                <input class="pool" type="text" id="login" v-model="profile.login" disabled />
                 </div>
 
                 <div class="form-group">
-                <input type="text" id="role" v-model="profile.role" disabled />
+                <input class="pool" type="text" id="role" v-model="profile.role" disabled />
                 </div>
             </div>
                 
@@ -42,24 +44,26 @@
 
             <!-- Выпадающий список -->
             <div class="form-group">
-            <label for="interests">Интересы:</label>
-            <div class="dropdown">
-                <button type="button" class="dropdown-btn" @click="toggleDropdown">
-                Выберите интересы
-                </button>
-                <ul v-show="dropdownOpen" class="dropdown-list">
-                <li v-for="interest in availableInterests" :key="interest">
-                    <label>
-                    <input type="checkbox" :value="interest" v-model="profile.interests" />
-                    {{ interest }}
-                    </label>
-                </li>
-                </ul>
+                <label for="interests">Интересы:</label>
+                <div class="dropdown">
+                    <button type="button" class="dropdown-btn" @click="toggleDropdown">
+                        Выберите интересы
+                    </button>
+                    <ul v-show="dropdownOpen" class="dropdown-list">
+                        <li v-for="interest in availableInterests" :key="interest">
+                            <label>
+                            <input type="checkbox" :value="interest" v-model="profile.interests" />
+                            {{ interest }}
+                            </label>
+                        </li>
+                    </ul>
+                </div>
             </div>
+            <div style="display: flex; justify-content: center; flex-direction: column; align-items: center; gap:30px">
+                <button type="submit" class="save-btn" style="font-size: 24pt; width: 30%">Сохранить</button>
+                <button type="button" class="back-btn" @click="goToMain" style="font-size: 24pt; width: 30%">Назад</button>
             </div>
-
-            <button type="submit" class="save-btn">Сохранить</button>
-            <button type="button" class="back-btn" @click="goToMain">Назад</button>
+                
         </form>
         </div>
     </div>
@@ -191,19 +195,23 @@
         gap: 10%;
         justify-content: center;
     }
-    .form-group input{
+    .pool{
         width: 100%;
         padding: 10px;
         border-radius: 8px;
+        border: 1px solid #000000;
+        font-size: 24pt;
     }
     #email{
         width: 100%;
         padding: 10px;
         border-radius: 8px;
+        font-size: 24pt;
     }
     #specialty{
         width: 100%;
         padding: 10px;
         border-radius: 8px;
+        font-size: 24pt;
     }
 </style>

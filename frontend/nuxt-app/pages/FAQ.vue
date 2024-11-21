@@ -11,8 +11,11 @@
     <NuxtLink to="/chat" class="btn">Чаты</NuxtLink>
     <div class="divider"></div>
     <NuxtLink to="/faq" class="btn">Обратная связь</NuxtLink>
+    <div class="divider"></div>
+    <NuxtLink to="/events" class="btn">Мероприятия</NuxtLink>
     </div>
-    <nuxt-link to="account" class="menu-item"><img src="public/img/student.png" alt="" /></nuxt-link>
+
+    <NuxtLink to="/account" class="btn">Профиль</NuxtLink>
     </nav>
     <div class="divider1"></div>
     <main class="FAQ-main">
@@ -21,19 +24,17 @@
             <article class="contacts">
                 <div class="element-cont">
                     <img src="public/img/geo.png" style="width: 27px; height: 27px;">
-                    <p class="name">адрес</p>
+                    <p class="name">Адрес</p>
                     <p class="info">г. Белорецк,<br>ул. Карла Маркса, д. 85</p>
                 </div>
-
                 <div class="element-cont">
                     <img src="public/img/phone.png" style="width: 27px; height: 27px;">
-                    <p class="name">телефон</p>
+                    <p class="name">Телефон</p>
                     <p class="info">+7 (347) 923-1682<br>+7 (347) 923-1907</p>
                 </div>
-
                 <div class="element-cont">
                     <img src="public/img/email.png" style="width: 27px; height: 27px;">
-                    <p class="name">email</p>
+                    <p class="name">Еmail</p>
                     <p class="info">bpk1932@mail.ru</p>
                 </div>
             </article>
@@ -67,6 +68,7 @@
     padding: 0;
     font-family: 'Munson';
     text-decoration: none;
+    overflow: none;
     }
     body {
         background-color: #D0E1F9;
@@ -99,7 +101,7 @@
 
     .FAQ-section .contacts {
         width: 20%;
-        height: 70%;
+        height: 80%;
         display: flex;
         justify-content: center;
         align-items: center;

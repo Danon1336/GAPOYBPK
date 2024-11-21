@@ -11,10 +11,12 @@
         <NuxtLink to="/chat" class="btn">Чаты</NuxtLink>
         <div class="divider"></div>
         <NuxtLink to="/faq" class="btn">Обратная связь</NuxtLink>
+        <div class="divider"></div>
+        <NuxtLink to="/events" class="btn">Мероприятия</NuxtLink>
         </div>
-        <nuxt-link to="account" class="menu-item"><img src="public/img/student.png" alt="" /></nuxt-link>
+        <NuxtLink to="/account" class="btn">Профиль</NuxtLink>
         </nav>
-
+        <div class="divider1"></div>
         <!-- Контент страницы -->
         <div class="club-content">
         <h2>КЛУБЫ КОЛЛЕДЖА</h2>
@@ -66,20 +68,10 @@
 <style scoped>
     .club-page {
     font-family: Arial, sans-serif;
-    background-color: #eaf3ff;
+    background-color: #D0E1F9;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    }
-
-    /* Навигационная панель */
-    .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
-    padding: 10px 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
     .club-image{
         width: 100px;

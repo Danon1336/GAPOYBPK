@@ -8,13 +8,15 @@
             <NuxtLink to="/"><h1>StudLink</h1></NuxtLink>
         </div>
         <div class="menu">
-        <NuxtLink to="/clubs" class="btn">Клубы</NuxtLink>
+        <NuxtLink to="/clubs" class="btn" style="padding: 10px 20px;">Клубы</NuxtLink>
         <div class="divider"></div>
-        <NuxtLink to="/chat" class="btn">Чаты</NuxtLink>
+        <NuxtLink to="/chat" class="btn" style="padding: 10px 20px;">Чаты</NuxtLink>
         <div class="divider"></div>
-        <NuxtLink to="/faq" class="btn">Обратная связь</NuxtLink>
+        <NuxtLink to="/faq" class="btn" style="padding: 10px 20px;">Обратная связь</NuxtLink>
+        <div class="divider"></div>
+        <NuxtLink to="/events" class="btn" style="padding: 10px 20px;">Мероприятия</NuxtLink>
         </div>
-        <NuxtLink to="/account" class="btn">Профиль</NuxtLink>
+        <NuxtLink to="/account" class="btn" style="padding: 10px 20px;">Профиль</NuxtLink>
         </nav>
         <div class="divider1"></div>
 
@@ -22,10 +24,10 @@
         <div class="content">
         <div class="header">
             <div class="event">
-                <h1 class="title">Мероприятия</h1>
+                <h1 class="title" >Мероприятия</h1>
             </div>
             <div class="dropdown">
-                <button class="btn" @click="showAddEventForm = !showAddEventForm">
+                <button class="btn" @click="showAddEventForm = !showAddEventForm" style="padding: 10px 20px;">
                 Добавить мероприятие
                 </button>
                     <form
@@ -298,15 +300,6 @@ h1{
 }
 iframe{
     border-radius: 18px;
-}
-.btn{
-    padding: 10px 20px;
-    border-radius: 18px;
-    cursor: pointer;
-    text-decoration: none;
-    color: #000;
-    font-size: 20pt;
-    background: #f9f9f9;
 }
 .divider1{
     margin-top: 12px;

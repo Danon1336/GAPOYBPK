@@ -12,10 +12,12 @@
         <NuxtLink to="/chat" class="btn">Чаты</NuxtLink>
         <div class="divider"></div>
         <NuxtLink to="/faq" class="btn">Обратная связь</NuxtLink>
+        <div class="divider"></div>
+        <NuxtLink to="/events" class="btn">Мероприятия</NuxtLink>
         </div>
-        <nuxt-link to="account" class="menu-item"><img src="public/img/student.png" alt="" /></nuxt-link>
+        <NuxtLink to="/account" class="btn">Профиль</NuxtLink>
         </nav>
-
+        <div class="divider1" style="margin-bottom: 10px;"></div>
         <!-- Основной контент -->
         <div class="content">
         <!-- Левая панель: Список чатов -->
@@ -225,24 +227,6 @@
 </script>
 
 <style scoped>
-    .chat-page {
-    font-family: Arial, sans-serif;
-    background-color: #D0E1F9;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    }
-
-    /* Навбар */
-    .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
-    padding: 10px 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
     .logo {
     display: flex;
     align-items: center;
